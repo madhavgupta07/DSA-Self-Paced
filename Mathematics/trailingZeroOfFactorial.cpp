@@ -1,7 +1,8 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int trailingZeroOfFactorial(int num){
+int trailingZeroOfFactorial(int num)
+{
     int fact = 1;
     int remainder = 0;
     int ans = 0;
@@ -9,22 +10,28 @@ int trailingZeroOfFactorial(int num){
     {
         fact = fact * i;
     }
-    while (fact > 0)
+    // while (fact > 0)
+    // {
+    //     remainder = fact % 10;
+    //     fact = fact / 10;
+    //     if (remainder == 0)
+    //     {
+    //         ans++;
+    //     }
+    // }
+    while (fact % 10 == 0)
     {
-        remainder = fact % 10;
-        fact = fact / 10;
-        if (remainder == 0)
-        {
-            ans++;
-        }
+        ans++;
+        fact /= 10;
     }
-    return ans;  
+
+    return ans;
 }
 int main()
 {
     int n;
     cout << "Enter Number: ";
     cin >> n;
-    cout << "Count of trailing zero in " << n << " is: " << trailingZeroOfFactorial(n);      
+    cout << "Count of trailing zero in " << n << " is: " << trailingZeroOfFactorial(n);
     return 0;
 }
