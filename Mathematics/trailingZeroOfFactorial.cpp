@@ -3,7 +3,7 @@ using namespace std;
 
 int trailingZeroOfFactorial(int num)
 {
-    int fact = 1;
+    long long int fact = 1;
     int remainder = 0;
     int ans = 0;
     for (int i = 1; i <= num; i++)
