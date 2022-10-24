@@ -1,13 +1,30 @@
 #include <iostream>
 using namespace std;
 
+// 1st Approach
+// bool checkForPrime(int num)
+// {
+//     if (num == 1 || num <= 0)
+//     {
+//         return false;
+//     }
+//     for (int i = 2; i < num; i++)
+//     {
+//         if (num % i == 0)
+//             return false;
+//         else
+//             return true;
+//     }
+// }
+
+// 2nd Approach
 bool checkForPrime(int num)
 {
     if (num == 1 || num <= 0)
     {
         return false;
     }
-    for (int i = 2; i < num; i++)
+    for (int i = 2; i*i < num; i++)
     {
         if (num % i == 0)
             return false;
@@ -18,12 +35,12 @@ bool checkForPrime(int num)
 
 int main()
 {
-    if (checkForPrime(121))
+    if (checkForPrime(1563))
     {
-        cout<<"YES";
+        cout<<"NO";
     }
     else{
-        cout<<"NO";
+        cout<<"YES";
     }
     return 0;
 }
