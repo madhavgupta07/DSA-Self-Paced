@@ -13,8 +13,6 @@ using namespace std;
 //     }
 // }
 
-
-
 // // 1st Approach
 // int gcd(int a, int b)
 // {
@@ -30,20 +28,32 @@ using namespace std;
 //     return gcd;
 // }
 
-
 // 2nd Approach Euclid's approach
-int gcd(int a, int b){
-    while (a != b)
+// int gcd(int a, int b){
+//     while (a != b)
+//     {
+//         if (a > b)
+//         {
+//             a = a - b;
+//         }
+//         else{
+//             b = b - a;
+//         }
+//     }
+//     return a;
+// }
+
+// 3rd Approach
+int gcd(int a, int b)
+{
+    if (b == 0)
     {
-        if (a > b)
-        {
-            a = a - b;
-        }
-        else{
-            b = b - a;
-        }
+        return a;
     }
-    return a;
+    else
+    {
+        return gcd(b, a % b);
+    }
 }
 int main()
 {
