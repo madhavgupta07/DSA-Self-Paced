@@ -1,29 +1,49 @@
 #include <iostream>
 using namespace std;
 
-int minimum(int a, int b)
-{
-    if (a < b)
+// int minimum(int a, int b)
+// {
+//     if (a < b)
+//     {
+//         return a;
+//     }
+//     else
+//     {
+//         return b;
+//     }
+// }
+
+
+
+// // 1st Approach
+// int gcd(int a, int b)
+// {
+//     int gcd = minimum(a, b);
+//     while (gcd > 0)
+//     {
+//         if (a % gcd == 0 && b % gcd == 0)
+//         {
+//             break;
+//         }
+//         gcd--;
+//     }
+//     return gcd;
+// }
+
+
+// 2nd Approach Euclid's approach
+int gcd(int a, int b){
+    while (a != b)
     {
-        return a;
-    }
-    else
-    {
-        return b;
-    }
-}
-int gcd(int a, int b)
-{
-    int gcd = minimum(a, b);
-    while (gcd > 0)
-    {
-        if (a % gcd == 0 && b % gcd == 0)
+        if (a > b)
         {
-            break;
+            a = a - b;
         }
-        gcd--;
+        else{
+            b = b - a;
+        }
     }
-    return gcd;
+    return a;
 }
 int main()
 {
