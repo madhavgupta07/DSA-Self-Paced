@@ -18,56 +18,56 @@ using namespace std;
 // }
 
 // 2nd Approach
-// bool checkForPrime(int num)
-// {
-//     if (num == 1 || num <= 0)
-//     {
-//         return false;
-//     }
-//     for (int i = 2; i*i < num; i++)
-//     {
-//         if (num % i == 0)
-//             return false;
-//         else
-//             return true;
-//     }
-// }
-
-// 3rd Approach for large numbers
-
 bool checkForPrime(int num)
 {
     if (num == 1 || num <= 0)
     {
         return false;
     }
-    if (num == 2 || num == 3)
+    for (int i = 2; i*i <= num; i++)
     {
-        return true;
-    }
-    if (num % 2 == 0 || num % 3 == 0)
-    {
-        return false;
-    }
-
-    for (int i = 5; i * i < num; i += 6)
-    {
-        if (num % i == 0 || num % (i + 2) == 0)
+        if (num % i == 0)
             return false;
-        else
-            return true;
     }
+    return true;
 }
+
+// 3rd Approach for large numbers
+
+// bool checkForPrime(int num)
+// {
+//     if (num == 1 || num <= 0)
+//     {
+//         return false;
+//     }
+//     if (num == 2 || num == 3)
+//     {
+//         return true;
+//     }
+//     if (num % 2 == 0 || num % 3 == 0)
+//     {
+//         return false;
+//     }
+
+//     for (int i = 5; i * i < num; i += 6)
+//     {
+//         if (num % i == 0 || num % (i + 2) == 0)
+//             return false;
+//         else
+//             return true;
+//     }
+// }
 
 int main()
 {
-    if (checkForPrime(9))
-    {
-        cout << "YES";
-    }
-    else
-    {
-        cout << "NO";
-    }
+    // if (checkForPrime(9))
+    // {
+    //     cout << "YES";
+    // }
+    // else
+    // {
+    //     cout << "NO";
+    // }
+    cout << checkForPrime(121);
     return 0;
 }
