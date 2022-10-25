@@ -44,29 +44,62 @@ using namespace std;
 
 // 2nd Approach
 
+// void primeFactors(int num)
+// {
+//     if (num <= 1)
+//     {
+//         return;
+//     }
+//     for (int i = 2; i * i <= num; i++)
+//     {
+//         while (num % i == 0)
+//         {
+//             cout << i << " ";
+//             num = num / i;
+//         }
+//     }
+//     if (num > 1)
+//     {
+//         cout<< num;
+//     }
+
+// }
+
+// 3rd Approach
 void primeFactors(int num)
 {
     if (num <= 1)
-    {
         return;
+    while (num % 2 == 0)
+    {
+        cout << 2 << " ";
+        num = num / 2;
     }
-    for (int i = 2; i * i <= num; i++)
+    while (num % 3 == 0)
+    {
+        cout << 3 << " ";
+        num = num / 3;
+    }
+    for (int i = 5; i * i <= num; i += 6)
     {
         while (num % i == 0)
         {
             cout << i << " ";
             num = num / i;
         }
+        while (num % (i + 2) == 0)
+        {
+            cout << (i + 2) << " ";
+            num = num / (i + 2);
+        }
     }
-    if (num > 1)
+    if (num > 3)
     {
-        cout<< num;
+        cout << num;
     }
-    
 }
-
 int main()
 {
-    primeFactors(450);
+    primeFactors(121);
     return 0;
 }
