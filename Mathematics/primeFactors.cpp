@@ -58,6 +58,11 @@ void primeFactors(int num)
             num = num / i;
         }
     }
+    if (num > 1)
+    {
+        cout<< num;
+    }
+    
 }
 
 int main()
