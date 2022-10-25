@@ -61,13 +61,13 @@ bool checkForPrime(int num)
 
 int main()
 {
-    if (checkForPrime(9) == false)
+    if (checkForPrime(9))
     {
-        cout << "NO";
+        cout << "YES";
     }
     else
     {
-        cout << "YES";
+        cout << "NO";
     }
     return 0;
 }
