@@ -36,7 +36,7 @@ bool checkForPrime(int num)
 
 // bool checkForPrime(int num)
 // {
-//     if (num == 1 || num <= 0)
+//     if (num <= 1)
 //     {
 //         return false;
 //     }
@@ -53,9 +53,8 @@ bool checkForPrime(int num)
 //     {
 //         if (num % i == 0 || num % (i + 2) == 0)
 //             return false;
-//         else
-//             return true;
 //     }
+//     return true;
 // }
 
 int main()
