@@ -37,7 +37,7 @@ int trailingZeroOfFactorial(int num)
     {
         ans = ans + (num / i);
     }
-    return ans;
+    return ans; 
 }
 int main()
 {
