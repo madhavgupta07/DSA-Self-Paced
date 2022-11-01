@@ -12,7 +12,6 @@ int main()
     p.x = 10;
     p.y = 20;
 
-    cout<<p.x<<" "<<p.y<<" ";
-    cout<<"Madhav";    
+    cout<<p.x<<" "<<p.y<<" ";    
     return 0;
 }
