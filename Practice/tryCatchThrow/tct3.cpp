@@ -22,9 +22,9 @@ int main()
     cin >> n;
     int *arr = new int(n);
     cout << "Enter " << n << " items" << endl;
-    for (int x = 0; x < n; x++)
+    for (int i = 0; i < n; i++)
     {
-        cin >> arr[x];
+        cin >> arr[i];
     }
     try
     {
